@@ -36,6 +36,8 @@ The following features are available:
 |Init_Win_bytes_forward and Init_Win_bytes_backward| Anomalies in the initial window size may be characteristics of some types of DDoS attacks. Monitoring these characteristics can help identify attacks. |
 |act_data_pkt_fwd| The number of forward packets indicates traffic anomalies. DDoS attacks may increase the number of forward packets. Monitoring this feature can help identify attacks. |
 
+Dataset:
+
 |Dataset|Attack Types Covered|Coverage Scenarios|
 |-------|--------|--------|
 |CIC-IDS2017| DoS (GoldenEye, Hulk, Slowloris, Slowhttptest), DDoS (HTTP Flood, LOIC) |Simulated enterprise network environment, including short-term burst attacks and sustained suppression attacks.|
@@ -68,6 +70,6 @@ The following features are available:
 ```
 
 ## Environment
-We use the compiler to [p4c] (https://github.com/p4lang/p4c), the simulation software switch [BMv2] (https://github.com/p4lang/behavioral-model) to test, Through [p4runtime] (https://github.com/p4lang/p4runtime) as our simple control plane.
+We use the software compiler to [p4c] (https://github.com/p4lang/p4c), the simulation software switch [BMv2] (https://github.com/p4lang/behavioral-model) to test, Through [p4runtime] (https://github.com/p4lang/p4runtime) as our simple control plane.
 
 You can use the following guide to get the complete environment installation/guide (https://github.com/jafingerhut/p4-guide)
