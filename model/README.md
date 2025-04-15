@@ -1,5 +1,4 @@
-# Model Folder
-
+# Model
 This folder contains implementations of machine learning models and algorithms. These models are designed for various tasks such as classification and decision-making.
 
 ## Files
@@ -15,7 +14,7 @@ This file contains the implementation of a `DecisionTreeClassifier`. The classif
 To use the `DecisionTreeClassifier`, import the class and fit it to your dataset:
 
 ```python
-from DT_CTS import DecisionTreeClassifier
+from DT-CTS import DecisionTreeClassifier
 import numpy as np
 
 # Example dataset
@@ -34,5 +33,3 @@ print(clf.tree)
 
 - The classifier avoids using more than three thresholds per feature to prevent overfitting.
 - The implementation is designed for educational and experimental purposes and may not be optimized for large datasets.
-
-
