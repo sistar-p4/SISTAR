@@ -72,4 +72,4 @@ Dataset:
 ## Environment
 We use the software compiler to [p4c](https://github.com/p4lang/p4c), the simulation software switch [BMv2](https://github.com/p4lang/behavioral-model) to test, Through [p4runtime](https://github.com/p4lang/p4runtime) as our simple control plane.
 
-You can use the following guide to get the complete environment installation [guide](https://github.com/jafingerhut/p4-guide)
+You can use the following [guide](https://github.com/jafingerhut/p4-guide) to get the complete environment installation.
