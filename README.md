@@ -2,7 +2,7 @@
 Meaning of SISTAR: switches are connected to each other like sisters in the network, and they light up the network like stars.
 
 
-Note: This code is for experimental use only, don't use it directly in production
+Note: This repository is only for anonymous review.
 
 # Introduction
 
