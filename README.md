@@ -20,6 +20,25 @@ The content provided by this repository is divided into 3 main sections:
 
 ## 1. model
 
+### Quick Start Guide
+
+1. Training the DT-CTS model
+    ```
+    python3 DT-CTS.py
+    ```
+
+2. You should see the following output
+    ```
+    Test set accuracy: 0.8550
+
+    Feature threshold usage record:
+    Feature 6 used threshold count: 2
+    Feature 8 used threshold count: 3
+    Feature 2 used threshold count: 1
+    ```
+
+
+
 -----------------------------------------------
 The following features are available:
 |feature|reason|
@@ -35,6 +54,8 @@ The following features are available:
 |Fwd Packets/s and Bwd Packets/s| Abnormal increases in forward and backward packet rates can be characteristic of DDoS attacks, and monitoring these rates can help identify attacks. |
 |Init_Win_bytes_forward and Init_Win_bytes_backward| Anomalies in the initial window size may be characteristics of some types of DDoS attacks. Monitoring these characteristics can help identify attacks. |
 |act_data_pkt_fwd| The number of forward packets indicates traffic anomalies. DDoS attacks may increase the number of forward packets. Monitoring this feature can help identify attacks. |
+
+-----------------------------------------------
 
 Dataset:
 
