@@ -61,13 +61,19 @@ To run the code
 4. cd to BMv2 folder
 
 5. Run the BMv2 software switch: 
-`p4@p4:~/tutorials/exercises/BMv2$ make` 
+    ```
+    p4@p4:~/tutorials/exercises/BMv2$ make
+    ```
 
 6. Adding test flow tables:
-`p4@p4:~/tutorials/exercises/BMv2$ ./entry-h1-h2.sh`
+    ```
+    p4@p4:~/tutorials/exercises/BMv2$ ./entry-h1-h2.sh
+    ```
 
 7. Now you can test the connectivity between h1 and h2:
-`mininet> h1 ping h2`
+    ```
+    mininet> h1 ping h2
+    ```
 
 ### Environment
 We use the software compiler to [p4c](https://github.com/p4lang/p4c), the simulation software switch [BMv2](https://github.com/p4lang/behavioral-model) to test, Through [p4runtime](https://github.com/p4lang/p4runtime) as our simple control plane.
@@ -80,51 +86,62 @@ You can use the following [guide](https://github.com/jafingerhut/p4-guide) to ge
 tna_detection.p4 under your p4 path of a Barefoot tofino switch, such as tna_range_match.p4 in its original path
 
 1. cd to directory 
-
+    ```
     cd ~/mydir/build
+    ```
 
 2. Run the cmake command to configure the build environment:
+    ```
     cmake $SDE/p4studio/ \
     -DCMAKE_INSTALL_PREFIX=$SDE/install \
     -DCMAKE_MODULE_PATH=$SDE/cmake \
     -DP4_NAME=tna_detection \
     -DP4_PATH=~/mydir/tna_detection/tna_detection.p4
+    ```
+
 
 3. Compiling programs
-
+    ```
     make
+    ```
 
 4. Installer
+    ```
     make install
+    ```
 
 ### Test
 
 Open the terminal in three different Windows
 
 1. Run the tofino model
-
-`cd $SDE`
-
-`./run_tofino_model.sh --arch tofino -p tna_detection`
+    ```
+    cd $SDE`
+    ./run_tofino_model.sh --arch tofino -p tna_detection
+    ```
 
 2. Run the switch
-
-`cd $SDE`
-
-`./run_switchd.sh --arch tofino -p tna_detection`
+    ```
+    cd $SDE`
+    ./run_switchd.sh --arch tofino -p tna_detection
+    ```
 
 3. Run the python test program
-
-`cd $SDE`
-
-`./run_p4_tests.sh --arch tofino -p tna_detection -t ~/mydir/tna_detection`
+    ```
+    cd $SDE
+    ./run_p4_tests.sh --arch tofino -p tna_detection -t ~/mydir/tna_detection
+    ```
 
 4. Generate test programs
-`cd ~/mydir`
-`p4testgen --target tofino --arch tna --std p4-16 --test-backend PTF --seed 1000 --max-tests 10 --out-dir tna_detection tna_detection/tna_detection.p4 --track-coverage STATEMENTS`
+    ```
+    cd ~/mydir
+    p4testgen --target tofino --arch tna --std p4-16 --test-backend PTF --seed 1000 --max-tests 10 --out-dir tna_detection tna_detection/tna_detection.p4 --track-coverage STATEMENTS
+    ```
 
 5. More detailed test information
-`p4testgen --target tofino --arch tna --std p4-16 --test-backend PTF --seed 1000 --max-tests 10 --out-dir tna_detection tna_detection/tna_detection.p4 --track-coverage STATEMENTS --print-coverage  --print-performance-report --path-selection GREEDY_STATEMENT_SEARCH --print-steps`
+    ```
+    p4testgen --target tofino --arch tna --std p4-16 --test-backend PTF --seed 1000 --max-tests 10 --out-dir tna_detection tna_detection/tna_detection.p4 --track-coverage STATEMENTS --print-coverage  --print-performance-report --path-selection GREEDY_STATEMENT_SEARCH --print-steps
+    ```
 
 # Code Architecture
 
