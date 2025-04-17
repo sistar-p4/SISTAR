@@ -41,7 +41,7 @@ The content provided by this repository is divided into 3 main sections:
 
 -----------------------------------------------
 The following features are available:
-|feature|reason|
+|Feature|Reason|
 |-------|--------|
 |Destination Port|DDoS attacks are usually focused on a specific target port. Monitoring the traffic on the target port can help identify the attack. |
 |Total Fwd Packets and Total Backward Packets|DDoS attacks usually result in an abnormal increase in the number of traffic packets. Monitoring the total number of forward and backward packets can help identify the attack. |
